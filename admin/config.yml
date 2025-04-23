@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"  # Resimlerin kaydedileceği yer
+public_folder: "/images"   # Sitede görünecek yol
+
+collections:
+  - name: "urunler"
+    label: "Ürünler"
+    folder: "_data/urunler"  # Verilerin kaydedileceği yer
+    create: true
+    fields:
+      - { name: "id", label: "ID", widget: "number" }
+      - { name: "isim", label: "Ürün Adı", widget: "string" }
+      - { name: "kategori", label: "Kategori", widget: "string" }
+      - { name: "stok", label: "Stok Durumu", widget: "string" }
+      - { name: "aciklama", label: "Açıklama", widget: "text" }
+      - { name: "resim", label: "Ürün Resmi", widget: "image" }

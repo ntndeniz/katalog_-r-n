@@ -1,0 +1,15 @@
+---
+layout: "main.njk"
+title: "Ürün Kataloğu"
+---
+<h1>Ürünlerimiz</h1>
+<ul>
+  {% for urun in urunler %}
+    <li>
+      <h3>{{ urun.isim }}</h3>
+      <p>Kategori: {{ urun.kategori }}</p>
+      <p>Stok: {{ urun.stok }}</p>
+      <img src="{{ urun.resim }}" width="200">
+    </li>
+  {% endfor %}
+</ul>
